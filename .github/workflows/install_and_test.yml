@@ -27,6 +27,4 @@ jobs:
       - name: Run tests
         run: pytest
       - name: Run CLI
-        run: |
-          pyspdxtools_parser --file ./tests/data/formats/SPDXJSONExample-v2.3.spdx.json
-          pyspdxtools_convertor --infile ./tests/data/formats/SPDXTagExample-v2.3.spdx -o temp.json
+        run: pyspdxtools -i ./tests/spdx/data/formats/SPDXJSONExample-v2.3.spdx.json
